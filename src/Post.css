@@ -27,11 +27,16 @@
     font-size: 12px;
     font-weight: 600;
     color: grey;
+    
 }
 
 .post__headerText > h3 {
    font-size: 15px;
    margin-bottom: 5px;
+}
+
+.post__text {
+    margin-bottom: 15px;
 }
 
 .post__body {
@@ -41,5 +46,9 @@
 
 .post__avatar {
     padding: 20px;
+    font-size: 18px !important;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 2px inset;
+
+    /* width: 30px !important; */
 }
 
