@@ -3,7 +3,8 @@ import TweetBox from './TweetBox';
 import Post from './Post'
 import './Feed.css';
 import Image from './images/yasmin.jpeg'
-import db from './firebase'
+import db from './firebase'; 
+import FlipMove from 'react-flip-move'
 
 const Feed = () => {
 
@@ -24,9 +25,12 @@ const Feed = () => {
           <h2>Home</h2> 
           </div>
          <TweetBox />
+
+         <FlipMove>
          {
            post.map(post => (
             <Post 
+            key={post.text}
             displayName = {post.displayName}
             username = {post.username}
             verified = {post.verified}
@@ -36,14 +40,7 @@ const Feed = () => {
            />
            ))
          }
-        
-         <Post 
-          displayName = "John Doe"
-          username = "johndoe"
-          verified = {false}
-          text="yasmin hillis joined twitter"
-         
-         />
+         </FlipMove>
         </div>
 
     );  
