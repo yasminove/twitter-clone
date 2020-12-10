@@ -1,4 +1,5 @@
 import React from 'react'; 
+import Image from './images/yasmin.jpeg'
 
 import './TweetBox.css'; 
 import Post from './Post'
@@ -10,9 +11,8 @@ const TweetBox = () => {
         <div className="tweetBox">
             <form>
                 <div className="tweetBox__input">
-                    <Avatar src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png"/>
-                    <input placeholder="What's happening" type="text"/>
-                    
+                    <Avatar src={Image} />
+                    <input placeholder="What's happening" type="text"/> 
                 </div>
                 <input className="tweetBox__imageInput" placeholder="Optional: Enter Image URL" type="text"/>
                 <Button variant="outlined" className="tweetBox__tweetButton">Tweet</Button>
