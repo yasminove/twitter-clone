@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './Post.css'
-import Image from './images/yasmin.jpeg'
+import './Post.css';
+import Image from './images/yasmin.jpeg';
 import { Avatar } from '@material-ui/core';
 
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
@@ -10,35 +10,29 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
 
-const Post = ({
-  displayName,
-  username,
-  timestamp,
-  verified,
-  text,
-  image,
-  avatar,
-}) => {
+const Post = ({ displayName, username, verified, text, image, avatar }) => {
   return (
     <div className='post'>
       <div className='post__avatar'>
-        <Avatar src={Image} />
+        <Avatar src={avatar} />
       </div>
       <div className='post__body'>
         <div className='post__header'>
           <div className='post__headerText'>
             <h3>
-              Yasmin Hillis
-              <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge"/> @yasminhillis
+              {displayName}{" "}
+              <span className='post__headerSpecial'>
+                {verified && <VerifiedUserIcon className='post__badge' />}@
+                {username}
               </span>
             </h3>
           </div>
           <div className='post_headerDescription'>
-            <p>I challenge you to build a twitter clone</p>
+            <p className="post__text">{text}</p>
           </div>
+          
         </div>
-
+        <img src={image} />
         <div className='post__footer'>
           <ChatBubbleOutlineIcon fontSize='small' />
           <RepeatIcon fontSize='small' />
